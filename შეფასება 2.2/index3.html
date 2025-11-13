@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+function quadraticFormula(a, b, c) {
+    let d = b * b - 4 * a * c;
+
+    if (d > 0) {
+        let x1 = (-b + Math.sqrt(d)) / (2 * a);
+        let x2 = (-b - Math.sqrt(d)) / (2 * a);
+        console.log("დისკრიმინანტი > 0, ამიტომ აქვს 2 რეალური ამონახსნი.");
+        console.log("x1 =", x1, "x2 =", x2);
+        return [x1, x2]; // return as array
+    } else if (d === 0) {
+        let x = -b / (2 * a);
+        console.warn("დისკრიმინანტი 0, აქვს 1 რეალური ამონახსნი.");
+        console.warn("x =", x);
+        return [x]; // return as array with 1 element
+    } else {
+        // Negative discriminant → complex roots
+        let realPart = -b / (2 * a);
+        let imagPart = Math.sqrt(-d) / (2 * a);
+        console.error("დისკრიმინანტი < 0, ამიტომ აქვს კომპლექსური ამონახსნი.");
+        console.error(`x1 = ${realPart} + ${imagPart}i`);
+        console.error(`x2 = ${realPart} - ${imagPart}i`);
+        return [`${realPart} + ${imagPart}i`, `${realPart} - ${imagPart}i`]; // return complex roots as strings
+    }
+}
+
+// Example usage
+let roots = quadraticFormula(3, 4, 5);
+console.log("Returned roots:", roots);
+</script>
+</body>
+</html>

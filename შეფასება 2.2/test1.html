@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+let a = [];
+let b = [];
+let k = [];
+let c = []
+for(let i = 0; i < 2; i++){
+    a[i] = parseFloat(prompt('შეიტანე a[' + i + ']:'));
+    b[i] = parseFloat(prompt('შეიტანე b[' + i + ']:'));
+    k[i] = a[i]*b[i];
+         c[i] = parseFloat(prompt('რამდენია ' + a[i] + ' * ' + b[i] + '?'));
+    if (c[i]==k[i]){
+        console.log('სწორია')
+    }
+    else {
+        console.log('ვასო ხარ')
+    }
+}
+console.log(a[1]);
+   </script> 
+</body>
+</html>

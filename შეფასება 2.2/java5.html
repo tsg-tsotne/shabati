@@ -1,0 +1,44 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- 1 -->
+<h1 id="caption">ეს სათაური </h1>
+<!-- 2 -->
+     <div class="container">ტექსტი 3</div>
+    <h1 id="caption">განთავსებულია სათაური </h1>
+    <h2>განთავსებულია მეორე სათაური </h2>
+    <p>ვრცელი ტექსტი 1 </p>
+    <h2>განთავსებულია მესამე სათაური </h2>
+    <p>ვრცელი ტექსტი 2 </p>
+    <div class="container">ტექსტი 5</div>
+    <div class="about"> ტექსტი კომპანიის შესახებ </div>
+    <input type="radio" name="gender" />
+    <input type="radio" name="gender" />
+    <div class="container">ტექსტი 4</div>
+
+<script>
+//1
+ document.getElementById("caption").setAttribute("style","color: red; background-color: #fff44c; font-size:15px") 
+//2
+       for(var i =0; i <document.getElementsByTagName("h2").length; i++){ 
+         
+           document.getElementsByTagName("h2")[i].innerHTML = "ჩანაცვლებული სათაური"
+        }
+           document.getElementsByTagName ("p")[0].style.color = "red"
+     
+          document.getElementsByClassName("container")[0].style.backgroundColor = "gray";
+        document.getElementsByClassName("container")[1].style.backgroundColor = "gray";      
+        document.getElementsByName("gender")[1].setAttribute("checked","checked") 
+        
+
+</script>   
+
+</body>
+</html>
